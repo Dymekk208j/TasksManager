@@ -30,10 +30,10 @@
                             @Html.AntiForgeryToken()
 
                             <div class="form-group">
-                                @Html.LabelFor(m => m.Email)
+                                @Html.LabelFor(m => m.Login)
                                 <div class="col-md-10">
-                                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", style = "width: 300px;" })
-                                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                                    @Html.TextBoxFor(m => m.Login, new { @class = "form-control", style = "width: 300px;" })
+                                    @Html.ValidationMessageFor(m => m.Login, "", new { @class = "text-danger" })
                                 </div>
                             </div>
 

@@ -3,14 +3,48 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <title>Manager zadań</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="container">
-        @RenderBody()
+    <div class="container-fluid p-5">
+        <div class="row">
+            <h1>Nazwa firmy</h1>
+        </div>
+        <div class="row">
+            <div class="col-2 p-0" id="Menu">
+                <div class="card">
+                    <div class="card-header pb-0">
+                        <h5>Menu</h5>
+                    </div>
+                    <button class="btn-sm btn-primary m-1">Realizowane zadanie</button>
+                    <button class="btn-sm btn-primary ml-1 mr-1 mb-1">Zadania zaplanowane ­ dziś</button>
+                    <button class="btn-sm btn-primary ml-1 mr-1 mb-1">Zadania zaplanowane ­ tygodniowe</button>
+                    <button class="btn-sm btn-primary ml-1 mr-1 mb-1">Zadania sprawdzane przez klienta</button>
+                    <button class="btn-sm btn-primary ml-1 mr-1 mb-1">Zadania wykonane</button>
+                    <button class="btn-sm btn-primary ml-1 mr-1 mb-1">Lista kontaktów</button>
+                    <button class="btn-sm btn-primary ml-1 mr-1 mb-1">Ustawienia konta</button>
+                    <button class="btn-sm btn-primary ml-1 mr-1 mb-1">Menu zarządzania</button>
+
+                    <button class="btn-sm btn-danger mt-5 ml-1 mr-1 mb-1">Wyloguj</button>
+
+                </div>
+            </div>
+
+            <div class="col p-0 pl-1" id="MainWindow">
+                <div class="card">
+                    <div class="card-header pb-0">
+                        <h5>
+                            @RenderSection("title", required: false)
+                        </h5>
+                    </div>
+                    @RenderBody()
+                </div>
+
+            </div>
+        </div>
     </div>
 
     @Scripts.Render("~/bundles/jquery")

@@ -49,9 +49,9 @@ namespace TasksMenager.Models
     public class LoginViewModel
     {
         [Required]
-        [Display(Name = "Email")]
+        [Display(Name = "Login")]
         [EmailAddress]
-        public string Email { get; set; }
+        public string Login { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -79,6 +79,34 @@ namespace TasksMenager.Models
         [Display(Name = "Confirm password")]
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
+
+        [Required]
+        [Display(Name = "Login")]
+        public string Login { get; set; }
+
+        [Display(Name = "Imie")]
+        public string FirstName { get; set; }
+
+        [Display(Name = "Nazwisko")]
+        public string LastName { get; set; }
+
+        [Display(Name = "Ulica")]
+        public string Street { get; set; }
+
+        [Display(Name = "Numer domu")]
+        public string HouseNumber { get; set; }
+
+        [Display(Name = "Numer mieszkania")]
+        public string FlatNumber { get; set; }
+
+        [Display(Name = "Kod pocztowy")]
+        public string PostCode { get; set; }
+
+        [Display(Name = "Numer telefonu")]
+        public string PhoneNumber { get; set; }
+
+        [Display(Name = "Dodatkowy numer telefonu")]
+        public string PhoneNumberSecond { get; set; }
     }
 
     public class ResetPasswordViewModel
