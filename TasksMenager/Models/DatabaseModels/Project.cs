@@ -5,15 +5,14 @@ namespace TasksMenager.Models.DatabaseModels
 {
     public enum State
     {
-        REALIZATION,
-        PAUSED,
-        NEW,
-        CHECKING,
-        DONE
+        Realization,
+        Paused,
+        New,
+        Checking,
+        Done
     }
     public class Project
     {
-        
         public int ProjectId { get; set; }
         public string Code { get; set; }
         public string Title { get; set; }

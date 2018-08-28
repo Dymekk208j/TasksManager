@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Data.Entity;
 using Microsoft.AspNet.Identity.EntityFramework;
-using TasksMenager.Models.DatabaseModels;
 
-namespace TasksMenager.Models
+namespace TasksMenager.Models.DatabaseModels
 {
     public class ApplicationUser : IdentityUser
     {

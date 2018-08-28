@@ -1,17 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using TasksMenager.Models.ViewModels;
 
 namespace TasksMenager.Controllers
 {
     public class CreateProjectController : Controller
     {
-        // GET: CreateProject
+        [HttpGet]
         public ActionResult Index()
         {
-            return View();
+            return View(new CreateProjectViewModel());
+        }
+
+        [HttpPost]
+        public ActionResult CreateProject(CreateProjectViewModel createProjectViewModel)
+        {
+
+            return RedirectToAction("Index");
         }
     }
 }
