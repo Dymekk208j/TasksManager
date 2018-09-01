@@ -33,5 +33,6 @@ namespace TasksMenager.Models.DatabaseModels
 
         public DbSet<RegisteredRealization> RegisteredRealizations { get; set; }
         public DbSet<Project> Projects { get; set; }
+        public DbSet<Company> Companies { get; set; }
     }
 }

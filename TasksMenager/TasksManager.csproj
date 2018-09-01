@@ -199,6 +199,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CompanyListController.cs" />
+    <Compile Include="Controllers\CreateCompanyController.cs" />
     <Compile Include="Controllers\CreateProjectController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -212,12 +214,18 @@
     <Compile Include="Migrations\201808130010506_CreatedDatabaseModels.Designer.cs">
       <DependentUpon>201808130010506_CreatedDatabaseModels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809011323067_m2.cs" />
+    <Compile Include="Migrations\201809011323067_m2.Designer.cs">
+      <DependentUpon>201809011323067_m2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\DatabaseModels\Company.cs" />
     <Compile Include="Models\DatabaseModels\Project.cs" />
     <Compile Include="Models\DatabaseModels\RegisteredRealization.cs" />
     <Compile Include="Models\ViewModels\AccountViewModels.cs" />
     <Compile Include="Models\DatabaseModels\IdentityModels.cs" />
+    <Compile Include="Models\ViewModels\CompanyListViewModel.cs" />
+    <Compile Include="Models\ViewModels\CompanyViewModel.cs" />
     <Compile Include="Models\ViewModels\CreateProjectViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -283,7 +291,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
@@ -301,6 +311,9 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\CreateProject\Index.cshtml" />
+    <Content Include="Views\CreateCompany\Index.cshtml" />
+    <Content Include="Views\CompanyList\Index.cshtml" />
+    <Content Include="Views\CompanyList\_TablePartialView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -322,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808130010506_CreatedDatabaseModels.resx">
       <DependentUpon>201808130010506_CreatedDatabaseModels.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809011323067_m2.resx">
+      <DependentUpon>201809011323067_m2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

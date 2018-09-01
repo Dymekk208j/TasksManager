@@ -30,11 +30,11 @@ namespace TasksMenager.Controllers
         //    var usr = (from u in db.Users
         //               where u.Id == userId
         //               select u).FirstOrDefault();
-        //    if (usr == null) return RedirectToAction("UserMgt", "AdminPanel", new { page = 0 });
+        //    if (usr == null) return RedirectToAction("UserMgt", "AdminPanel", new { Page = 0 });
 
         //    db.Entry(usr).State = System.Data.Entity.EntityState.Deleted;
         //    db.SaveChanges();
-        //    return RedirectToAction("UserMgt", "AdminPanel", new { page = 0 });
+        //    return RedirectToAction("UserMgt", "AdminPanel", new { Page = 0 });
 
         //}
 
@@ -42,7 +42,7 @@ namespace TasksMenager.Controllers
         //{
         //    if (!ModelState.IsValid)
         //    {
-        //        return RedirectToAction("UserMgt", "AdminPanel", new { page = 0 });
+        //        return RedirectToAction("UserMgt", "AdminPanel", new { Page = 0 });
         //    }
 
         //    ApplicationDbContext db = new ApplicationDbContext();
@@ -52,7 +52,7 @@ namespace TasksMenager.Controllers
         //    db.SaveChanges();
 
 
-        //    return RedirectToAction("UserMgt", "AdminPanel", new { page = 0 });
+        //    return RedirectToAction("UserMgt", "AdminPanel", new { Page = 0 });
 
         //}
 

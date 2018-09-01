@@ -11,9 +11,9 @@ namespace TasksMenager.Models.ViewModels
         [Display(Name = "Tytuł")]
         public string Title { get; set; }
         [Display(Name = "Firma")]
-        public Company Company { get; set; }
+        public int CompanyId { get; set; }
         [Display(Name = "Przydzielony budżet czasowy")]
-        public double TimeBudgetAllocated { get; set; }
+        public float TimeBudgetAllocated { get; set; }
         [Display(Name = "Zaplanowana data wykonania")]
         public DateTime SheduledDate { get; set; }
         [Display(Name = "Ostateczna data wykonania")]
@@ -21,6 +21,6 @@ namespace TasksMenager.Models.ViewModels
         [Display(Name = "Opis")]
         public string Description { get; set; }
         [Display(Name = "Przydzielone do")]
-        public ApplicationUser AssignedToUserId { get; set; }
+        public string AssignedToUserId { get; set; }
     }
 }

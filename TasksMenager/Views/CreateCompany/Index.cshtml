@@ -1,0 +1,61 @@
+﻿
+@model TasksMenager.Models.ViewModels.CompanyViewModel
+
+@section title{ Dodaj firmę }
+
+@{ using (Html.BeginForm("CreateNewCompany", "CreateCompany", FormMethod.Post))
+    {
+        <div class="row pl-3 pt-3 mb-1" id="FirstRow">
+            <div class="col" id="NameLabel">
+                @Html.LabelFor(m => m.Name, new { @class = "font-weight-bold" })
+            </div>
+            <div class="col" id="NameInput">
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control-sm" })
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+
+            <div class="col" id="HouseNumberLabel">
+                @Html.LabelFor(m => m.HouseNumber, new { @class = "font-weight-bold" })
+            </div>
+            <div class="col" id="HouseNumberInput">
+                @Html.TextBoxFor(m => m.HouseNumber, new { @class = "form-control-sm" })
+                @Html.ValidationMessageFor(m => m.HouseNumber)
+            </div>
+        </div>
+
+        <div class="row pl-3 mb-1" id="SecondRow">
+            <div class="col" id="CityLabel">
+                @Html.LabelFor(m => m.City, new { @class = "font-weight-bold" })
+            </div>
+            <div class="col" id="CityInput">
+                @Html.TextBoxFor(m => m.City, new { @class = "form-control-sm" })
+                @Html.ValidationMessageFor(m => m.City)
+            </div>
+
+            <div class="col" id="FlatNumberLabel">
+                @Html.LabelFor(m => m.FlatNumber, new { @class = "font-weight-bold" })
+            </div>
+            <div class="col" id="FlatNumberInput">
+                @Html.TextBoxFor(m => m.FlatNumber, new { @class = "form-control-sm" })
+                @Html.ValidationMessageFor(m => m.FlatNumber)
+            </div>
+        </div>
+
+        <div class="row pl-3 mb-1" id="ThirdRow">
+            <div class="col" id="StreetLabel">
+                @Html.LabelFor(m => m.Street, new { @class = "font-weight-bold" })
+            </div>
+            <div class="col" id="StreetInput">
+                @Html.TextBoxFor(m => m.Street, new { @class = "form-control-sm" })
+                @Html.ValidationMessageFor(m => m.Street)
+            </div>
+            <div class="col"></div>
+            <div class="col"></div>
+        </div>
+
+        <div class="col d-flex flex-column">
+            <button type="submit" class="align-self-end btn btn-sm btn-primary mb-2 mr-2" style="margin-top: auto;">Dodaj firmę</button>
+
+        </div>
+    }
+}
