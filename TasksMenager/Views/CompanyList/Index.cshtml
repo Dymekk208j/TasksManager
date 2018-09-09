@@ -1,25 +1,51 @@
 ﻿@model TasksMenager.Models.ViewModels.CompanyListViewModel
 
-@section title{ Lista kontaktów }
+@section title{
+        <div class="align-self-start">
+            Lista kontaktów
+        </div>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th scope="col">Lp.</th>
-            <th scope="col">Nazwa</th>
-            <th scope="col">Miasto</th>
-            <th scope="col">Adres</th>
-        </tr>
-    </thead>
-    <tbody>
-    @{ int n = 1;}
-    @foreach (var m in Model.Comapnies)
-    {
-        <tr>
-            <td>@Html.Name(n.ToString())</td>
-            @Html.Partial("_TablePartialView", m)
-        </tr>
-        n++;
-    }
-    </tbody>
-</table>
+        <div class="float-right">
+            @Html.Name("Strona " + (Model.Page+1))
+        </div>
+}
+<div class="row">
+    <div class="col">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Lp.</th>
+                    <th scope="col">Nazwa</th>
+                    <th scope="col">Miasto</th>
+                    <th scope="col">Adres</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ int n = (Model.Page * 10) + 1;}
+                @foreach (var m in Model.Comapnies)
+                {
+                    <tr>
+                        <td>@Html.Name(n.ToString())</td>
+                        @Html.Partial("_TablePartialView", m)
+                    </tr>
+                    n++;
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col d-flex flex-column">
+        <div class="align-self-end d-inline mb-2 mr-2" style="margin-top: auto;">
+            @if (Model.NextPage)
+            {
+                <button type="button" class="btn btn-sm btn-primary" onclick="location.href='@Url.Action("Index", "CompanyList", new {page = Model.Page+1})'">Następna strona</button>
+            }
+            @if (Model.PreviousPage)
+            {
+                <button type="button" class="btn btn-sm btn-primary" onclick="location.href='@Url.Action("Index", "CompanyList", new {page = Model.Page-1})'">Poprzednia strona</button>
+            }
+        </div>
+    </div>
+</div>
